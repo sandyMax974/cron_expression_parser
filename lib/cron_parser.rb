@@ -63,8 +63,8 @@ def cron_expression_parse(cron_expression)
     months.map! { |month| month.to_s }
   elsif cron_array[3].include?("/")
     # cron_array[3].split("/")
-    p start_at = cron_array[3].split("/")[0].to_i
-    p repeat_every = cron_array[3].split("/")[1].to_i
+    start_at = cron_array[3].split("/")[0].to_i
+    repeat_every = cron_array[3].split("/")[1].to_i
     months = []
     while start_at <= 12 do
       months.push(start_at)
@@ -99,5 +99,5 @@ def cron_expression_parse(cron_expression)
   puts "day of week   "
 end
 
-cron_statement = ARGV[0]
-cron_expression_parse(cron_statement)
+# cron_statement = ARGV[0]
+# cron_expression_parse(cron_statement)
