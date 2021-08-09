@@ -60,4 +60,15 @@ def cron_expression_parse(cron_expression)
   elsif cron_array[1].include?("-")
     hour = Array(cron_array[1].split("-")[0]..cron_array[1].split("-")[1])
   end
+
+  if cron_array[3] == "*"
+    months = Array(1..12)
+    months.map! { |month| month.to_s }
+  elsif cron_array[3].include?(",")
+    months = []
+    months = cron_array[3].split(",")
+    months
+  elsif cron_array[3].include?("-")
+    months = Array(cron_array[3].split("-")[0]..cron_array[3].split("-")[1])
+  end
 end
