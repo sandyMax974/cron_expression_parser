@@ -34,4 +34,30 @@ def cron_expression_parse(cron_expression)
     minutes = Array(cron_array[0].split("-")[0]..cron_array[0].split("-")[1])
   end
 
+  if cron_array[1] == "*"
+    hour = Array(0..23)
+  elsif cron_array[1] == "0"
+    hour = ["0"]
+  elsif cron_array[0].include?("/")
+    cron_array[1].split("/")
+    if cron_array[0].split("/")[1] == "*"
+      start_at = 0
+      repeat_every = cron_array[1].split("/")[1].to_i
+    else
+      start_at = cron_array[1].split("/")[0].to_i
+      repeat_every = cron_array[1].split("/")[1].to_i
+    end
+    hour = []
+    while start_at <= 23 do
+      hour.push(start_at)
+      start_at+= repeat_every
+    end
+    hour.map! { |time| time.to_s }
+  elsif cron_array[1].include?(",")
+    hour = []
+    hour = cron_array[1].split(",")
+    hour
+  elsif cron_array[1].include?("-")
+    hour = Array(cron_array[1].split("-")[0]..cron_array[1].split("-")[1])
+  end
 end
