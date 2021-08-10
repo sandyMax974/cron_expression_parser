@@ -1,7 +1,7 @@
 # Technical Task - Cron Expression Parser (Ruby)
 
 **Status**: Incomplete
-The parser does not currently convert `day of month` and `day of week`.
+- The parser does not currently convert `day of month` and `day of week`.
 
 # Description
 Command line script which parses a cron string and expands each field to show the times at which it will run. 
