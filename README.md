@@ -20,16 +20,28 @@ minute        0 15 30 45
 hour          0
 day of month  1 15
 month         1 2 3 4 5 6 7 8 9 10 11 12
-day of week     1 2 3 4 5
+day of week   1 2 3 4 5
 command       /usr/bin/find
 ```
 
-## How to run
-
+## Intallation
 ```
 $ git clone git@github.com:sandyMax974/cron_expression_parser.git
 $ cd cron_expression_parser
 $ bundle install
-$ cron_expression_parser "*/15 0 1,15 * 1-5 /usr/bin/find"
+```
+### How to run
+```
+$ cd lib
+$ ruby parser.rb "*/15 0 1,15 * 1-5 /usr/bin/find"
+```
+### How to test
+```
+$ cd cron_expression_parser
+$ bundle exec rspec
 ```
 
+## Next steps
+
+[ ] Implement code to parse `day of week`
+[ ] Implement code to parse `day of month`

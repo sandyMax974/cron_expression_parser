@@ -1,3 +1,4 @@
+
 def cron_expression_parse(cron_expression)
   cron_array = cron_expression.split(" ")
 
@@ -74,12 +75,12 @@ def cron_expression_parse(cron_expression)
   end
 
 
-  
   puts "minute        " + minutes.join(" ")
   puts "hour          " + hour.join(" ")
   puts "day of month  "
   puts "month         " + months.join(" ")
   puts "day of week   "
+  puts "command       " + cron_array[5]
 end
 
 # cron_statement = ARGV[0]
