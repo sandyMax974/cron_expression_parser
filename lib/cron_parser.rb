@@ -82,6 +82,3 @@ def cron_expression_parse(cron_expression)
   puts "day of week   "
   puts "command       " + cron_array[5]
 end
-
-# cron_statement = ARGV[0]
-# cron_expression_parse(cron_statement)
