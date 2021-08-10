@@ -24,7 +24,7 @@ day of week   1 2 3 4 5
 command       /usr/bin/find
 ```
 
-## Requierements
+## Requirements
 
 ### How to install
 ```
