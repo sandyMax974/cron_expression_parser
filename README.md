@@ -26,7 +26,7 @@ command       /usr/bin/find
 
 ## Requierements
 
-### How to installation
+### How to install
 ```
 $ git clone git@github.com:sandyMax974/cron_expression_parser.git
 $ cd cron_expression_parser
