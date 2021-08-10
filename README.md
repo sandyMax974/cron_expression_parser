@@ -45,3 +45,4 @@ $ bundle exec rspec
 
 [ ] Implement code to parse `day of week`
 [ ] Implement code to parse `day of month`
+[ ] Refactor code to be DRY
