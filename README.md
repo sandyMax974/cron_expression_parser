@@ -24,7 +24,9 @@ day of week   1 2 3 4 5
 command       /usr/bin/find
 ```
 
-## Intallation
+## Requierements
+
+### How to installation
 ```
 $ git clone git@github.com:sandyMax974/cron_expression_parser.git
 $ cd cron_expression_parser
