@@ -1,6 +1,6 @@
 # Technical Task - Simplified Cron Expression Parser (Ruby)
 
-# Description
+## Description
 Command line script which parses a cron string and expands each field to show the times at which it will run. 
 
 We are only considering the standard cron format with five time fields (minute, hour, day of month, month, and day of week) plus a command, and are not need handling the special time strings such as "@yearly". The input will be on a single line.
